@@ -4,15 +4,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import adwords_fill.parser as pars
+import logging
 
 __all__ = ['login', 'create_group']
-driver = webdriver.Chrome('chromedriver')
+driver = webdriver.Chrome('./chromedriver')
 
 
 def sign_in(login, password):
+    logging.info('start sign in')
     driver.get(
         "https://adwords.google.com/cm/CampaignMgmt?authuser=5&__u=9864095156&__c=9116612578#c.739288241.ag&app=cm")
     login_to_google_adwords(login, password)
+    logging.info('end sign in')
 
 
 def login_to_google_adwords(login, password):
@@ -70,10 +73,10 @@ def fill_advert_main_data(count, row):
 
 
 def create_other_advert(count, row):
-    try:
-        wait_for_element_and_click_by_css('div#adgroup-creatives-tab span:nth-child(1)')
-    except:
-        print('Already here')
+    # try:
+    #     wait_for_element_and_click_by_css('div#adgroup-creatives-tab span:nth-child(1)')
+    # except:
+    #     pass
     wait_for_element_and_click_by_css('div.aw-toolbar div.aw-add-button')
     wait_for_element_and_click_by_css('div.gux-combo.gux-dropdown-c > div:nth-child(1)')
     wait_for_element_and_click_by_css('input.aw-text.cNb-h.ce-d')
@@ -133,8 +136,7 @@ def fill_prices(row):
         if count > 5:
             break
     if count < 3:
-        for i in range(count, 3):
-            fill_price_row(rows[count + 1], 'General Rehabilitation', 'Choose Your Clinic', row['href'], '501')
+        logging.warning(pars.get_title(row) + ' without prices')
 
     buttons = driver.find_elements_by_css_selector('div.aw-modal-popup-footer div.goog-button-base-content')
     buttons[0].click()
@@ -149,11 +151,28 @@ def fill_price_row(row, name, desc, href, value):
 
 
 def create_group(row):
+    logging.info('start add new group')
     wait_for_element_and_click_by_xpath('//*[@id="campaign-adgroups-tab"]/div[3]/span[1]')
     wait_for_element_and_click_by_css('div.aw-inline-block')
+    logging.info('click on new group')
     create_first_advert(row)
+    logging.info('create first advert')
     create_other_advert(1, row)
+    logging.info('create second advert')
     create_other_advert(2, row)
+    logging.info('create third advert')
     fill_prices(row)
+    logging.info('fill prices')
     driver.execute_script('document.querySelectorAll("div.aw-breadcrumbs a")[1].click()')
     WebDriverWait(driver, 100).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, 'div#loadingStatus')))
+    logging.info('end wait for loading')
+
+
+def reload():
+    driver.get(
+        "https://adwords.google.com/cm/CampaignMgmt?authuser=5&__u=9864095156&__c=9116612578#c.739288241.ag&app=cm")
+    try:
+        alert = driver.switch_to.alert()
+        alert.accept()
+    except:
+        pass

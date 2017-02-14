@@ -1,4 +1,5 @@
 import random
+import logging
 
 
 def get_plused(str):
@@ -31,7 +32,7 @@ def get_desc(count, row):
         elif len(row['disease_name']) <= 33:
             return row['disease_name'] + " Treatment in Germany.Fixed Price & Insurance!"
         else:
-            f.write("error description in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
+            logging.error("error description in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
             return 'ERROR'
     elif count == 1:
         return 'Select by Price and Book Treatment Today. Save up to 70% with Booking Health™'
@@ -52,7 +53,7 @@ def get_header1(count, row):
         if len(row['disease_name']) < 30:
             return row['disease_name'] + '?'
         else:
-            f.write("error header1 in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
+            logging.error("error header1 in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
             return 'ERROR'
     else:
         if len(row['disease_name']) <= 20:
@@ -60,7 +61,7 @@ def get_header1(count, row):
         elif len(row['disease_name']) <= 30:
             return row['disease_name']
         else:
-            f.write("error header1 in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
+            logging.error("error header1 in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
             return 'ERROR'
 
 
@@ -82,7 +83,7 @@ def get_path(count, row):
         if path1 == '':
             path1 = row['disease_type'].title()
             path2 = "Treatment"
-            f.write("check path in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
+            logging.warning("check path in " + row["disease_type"] + '_' + row["disease_name"] + '\n')
     return path1, path2
 
 
