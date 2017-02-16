@@ -2,7 +2,7 @@ import pandas as pd
 import adwords_fill.adwords as adw
 import logging
 
-logging.basicConfig(filename='test.log', level=logging.DEBUG, filemode='w')
+logging.basicConfig(filename='test.log', level=logging.INFO, filemode='w')
 data_file_name = 'test.csv'
 data = pd.read_csv(data_file_name)
 logging.info('read file' + data_file_name)
