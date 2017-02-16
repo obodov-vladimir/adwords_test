@@ -23,12 +23,17 @@ class LiveInternetSpider(scrapy.Spider):
     def parse(self, response):
         csv.field_size_limit(sys.maxsize)
         # print(response.body)
-        # csv_new =
-        csv.writer('./new', 'w+').writerows(csv.reader(open(response.body), delimiter="\t"))
+        f = open('liveinternet.csv', 'w+')
+
+        csv_new = csv.reader(open(response.body), delimiter="\t")
+        print(csv_new)
+        csv.writer(f).writerows(csv.reader(csv_new)
+
+        # csv.writer('./new', 'w+').writerows(csv.reader(open(response.body), delimiter="\t"))
         # csv.writer(file(sys.argv[2], 'w+')).writerows(csv.reader(open(sys.argv[1]), delimiter="\t"))
-        yield {
-            'response': response
-        }
+        # yield {
+        #     'response': response
+        # }
         # for site in response.css('div.#rows > div'):
         #     yield {
         #         'site_name': site.css('div.text a::text').extract_first(),
