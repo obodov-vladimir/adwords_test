@@ -1,0 +1,79 @@
+<!-- saved from url=(0899)https://www.google.com.ua/ads/user-lists/942197638/?fmt=1&num=1&cv=8&frm=0&url=https%3A%2F%2Fbookinghealth.ru%2F&eid=376635470&random=1304741502&fpvtc=/942197638/%3Frandom%3D1434121260%26cv%3D8%26fst%3D1488045600000%26num%3D1%26fmt%3D1%26guid%3DON%26eid%3D376635470%26u_h%3D768%26u_w%3D1366%26u_ah%3D744%26u_aw%3D1366%26u_cd%3D24%26u_his%3D2%26u_tz%3D120%26u_java%3Dfalse%26u_nplug%3D5%26u_nmime%3D7%26frm%3D0%26url%3Dhttps%253A%252F%252Fbookinghealth.ru%252F%26tiba%3DBookingHealth.ru%2520%25E2%2580%2594%2520%25D0%25BB%25D0%25B5%25D1%2587%25D0%25B5%25D0%25BD%25D0%25B8%25D0%25B5%2520%25D0%25B2%2520%25D0%25B5%25D0%25B2%25D1%2580%25D0%25BE%25D0%25BF%25D0%25B5%25D0%25B9%25D1%2581%25D0%25BA%25D0%25B8%25D1%2585%2520%25D0%25BA%25D0%25BB%25D0%25B8%25D0%25BD%25D0%25B8%25D0%25BA%25D0%25B0%25D1%2585%2520%25D0%25BF%25D0%25BE%2520%25D0%25B4%25D0%25BE%25D1%2581%25D1%2582%25D1%2583%25D0%25BF&ipr=y&ulfeg=y -->
+<html>
+<script data-x-lastpass="">(function () {
+    var c = 0;
+    if ("undefined" !== typeof CustomEvent && "function" === typeof window.dispatchEvent) {
+        var a = function (a) {
+            try {
+                if ("object" === typeof a && (a = JSON.stringify(a)), "string" === typeof a)return window.dispatchEvent(new CustomEvent("lprequeststart", {
+                    detail: {
+                        data: a,
+                        requestID: ++c
+                    }
+                })), c
+            } catch (f) {
+            }
+        }, b = function (a) {
+            try {
+                window.dispatchEvent(new CustomEvent("lprequestend", {detail: a}))
+            } catch (f) {
+            }
+        };
+        "undefined" !== typeof XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.send && (XMLHttpRequest.prototype.send =
+            function (c) {
+                return function (f) {
+                    var d = this, e = a(f);
+                    e && d.addEventListener("loadend", function () {
+                        b({requestID: e, statusCode: d.status})
+                    });
+                    return c.apply(d, arguments)
+                }
+            }(XMLHttpRequest.prototype.send));
+        "function" === typeof fetch && (fetch = function (c) {
+            return function (f, d) {
+                var e = a(d), g = c.apply(this, arguments);
+                if (e) {
+                    var h = function (a) {
+                        b({requestID: e, statusCode: a && a.status})
+                    };
+                    g.then(h)["catch"](h)
+                }
+                return g
+            }
+        }(fetch))
+    }
+})();
+(function () {
+    if ("undefined" !== typeof CustomEvent) {
+        var c = function (a) {
+            if (a.lpsubmit)return a;
+            var b = function () {
+                try {
+                    this.dispatchEvent(new CustomEvent("lpsubmit"))
+                } catch (k) {
+                }
+                return a.apply(this, arguments)
+            };
+            b.lpsubmit = !0;
+            return b
+        };
+        window.addEventListener("DOMContentLoaded", function () {
+            if (document && document.forms && 0 < document.forms.length)for (var a = 0; a < document.forms.length; ++a)document.forms[a].submit = c(document.forms[a].submit)
+        }, !0);
+        document.createElement = function (a) {
+            return function () {
+                var b = a.apply(this,
+                    arguments);
+                b && "FORM" === b.nodeName && b.submit && (b.submit = c(b.submit));
+                return b
+            }
+        }(document.createElement)
+    }
+})();
+</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body style="background-color: transparent;" marginwidth="0" marginheight="0"></body>
+<script src="chrome-extension://ocggccaacacpienfcgmgcihoombokbbj/pages/client/livestartpage-message-add.js"></script>
+</html>

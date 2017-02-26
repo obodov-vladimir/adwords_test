@@ -1,0 +1,32 @@
+total	9053	0	0
+lechenie-simptomy.ru	lechenie-simptomy.ru/	Лечение-симптомы	765	54	private
+medmoon.ru	www.medmoon.ru/	MedMoon.ru - журнал о здоровье, фитнесе и правильном питании	764	69	private
+zppp.saharniy-diabet.com	zppp.saharniy-diabet.com/	ЗППП	763	66	public
+vlanamed.com	vlanamed.com/	Энциклопедия Заболеваний	748	68	private
+gemotest.ru	www.gemotest.ru/	Офицальный сайт лаборатории ГЕМОТЕСТ	731	94	private
+spinazdorov.ru	spinazdorov.ru/	SpinaZdorov - все о боли в спине и болезнях позвоночника	718	71	public
+pankreatit.saharniy-diabet.com	pankreatit.saharniy-diabet.com/	ZHKT	696	59	private
+nedeli-beremennosti.com	nedeli-beremennosti.com/	nedeli-beremennosti.com	673	70	private
+apteka-ifk.ru	www.apteka-ifk.ru/	Аптека ИФК. Сеть аптек Москвы. Заказ и доставка лекарств на дом и в офис.	651	89	private
+med-pomosh.com	med-pomosh.com/	Проект &quot;Медпомощь&quot;	627	66	private
+apteki	apteki.su/	Apteki.su - Поиск лекарств в аптеках России, единая справочная	621	93	public
+spb.napopravku.ru	spb.napopravku.ru/	НаПоправку.ру - поиск клиник и врачей в Санкт-Петербурге	612	94	private
+moskovskaya-medicina.ru	moskovskaya-medicina.ru/	Московская медицина	600	69	private
+startsmile_ru	startsmile.ru	Startsmile.ru	588	64	private
+medihost.ru	medihost.ru/	Запись на приём. Консультации. Отзывы о клиниках	585	97	private
+lvrach.ru	www.lvrach.ru/	&quot;Лечащий врач&quot; - Медицинский научно-практический портал	556	58	public
+vnormu.ru	vnormu.ru/	Сохранение и восстановление здоровья	550	69	private
+adento.ru	adento.ru/	Аденто.ру - Стоматологический портал №1 в рунете!	540	59	private
+dr20.ru	dr20.ru/	Научно-популярный портал о здоровье	538	53	private
+sikirina.tsi.ru	www.sikirina.tsi.ru/	Здоровье Женщины	533	65	public
+sexopedia.ru	www.sexopedia.ru/	Сексопедия.Ру - сексуальная энциклопедия	532	59	private
+menquestions.ru	menquestions.ru/	Menquestions.ru - Портал Мужского здоровья	532	54	private
+medlinks.ru	www.medlinks.ru/	Medlinks - Вся медицина в интернет	522	70	private
+samozapis-spb.ru	samozapis-spb.ru/	Самозапись к врачу в Санкт-Петербурге	521	99	private
+startsmile.ru	www.startsmile.ru/	Стоматологический портал startsmile.ru	514	62	private
+protrakt.ru	protrakt.ru/	Заболевания органов ЖКТ	507	76	private
+zdravoe.com	zdravoe.com/	zdravoe - портал вашего здоровья	500	40	private
+MDclinic	московский-доктор.рф	Сеть клиник - &quot;Московский Доктор&quot;	488	63	private
+my-bt.ru	my-bt.ru/	Базальная температура. Индивидуальный график.	473	63	public
+psihomed.com	psihomed.com/	Психология и Психиатрия	469	62	private
+
